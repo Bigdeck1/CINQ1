@@ -38,5 +38,29 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var accountType = document.getElementById('accountType').value;
+
+            // Perform validation
+            if (username.trim() === '' || password.trim() === '' || accountType === '') {
+                alert('Please fill out all fields.');
+                return;
+            }
+
+            // Redirect based on account type
+            if (accountType === 'student') {
+                window.location.href = 'homepage.html';
+            } else if (accountType === 'teacher') {
+                window.location.href = 'tc.html';
+            }
+        });
+    </script>
+    
 </body>
 </html>
