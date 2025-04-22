@@ -1,0 +1,125 @@
+/* Resetting default margins and padding */
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(image/Nitro_Wallpaper_01_3840x2400.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Sidebar styles */
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    background-color: #333;
+    padding-top: 20px;
+    position: fixed;
+    left: -250px;
+    top: 0;
+    z-index: 2;
+    transition: left 0.3s ease;
+}
+
+.sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #ecf0f1;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #34495e;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: #000000;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.toggle-btn span {
+    background-color: #040202;
+    height: 3px;
+    width: 25px;
+    margin: 5px 0;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+}
+
+/* Additional effects */
+.transparent-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.transparent-container:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.8) 100%);
+    transition: transform 0.5s ease;
+    transform: translateY(-100%);
+}
+
+.transparent-container:hover:before {
+    transform: translateY(0);
+}
+
+.card-body {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        left: -100%;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .overlay {
+        display: none;
+    }
+}
+
+

@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 280px;
+    background-color: white;
+    overflow: hidden;
+    transition: 1s;
+}
+
+nav:hover {
+    width: 280px;
+    transition: 1s;
+}
+
+.logo {
+    text-align: center;
+    display: flex;
+    margin: 10px 0 0 10px;
+    padding-bottom: 3rem;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+}
+
+.logo span {
+    font-weight: bold;
+    padding-left: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.container {
+    display: flex;
+}
+
+nav {
+    background-color: #333;
+    height: 100vh;
+    width: 200px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 15px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.logout {
+    margin-top: auto;
+}
+
+.posted-activity {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #e6f7ff;
+}
+
+/* Add more styles based on your preferences */

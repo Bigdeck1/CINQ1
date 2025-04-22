@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Classroom</title>
+  <!-- Import Roboto font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styless.css">
+  <style>
+    /* Apply Roboto font to all elements */
+    body, h1, h2, h3, h4, h5, h6, p, ul, li, input, textarea, button {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+<body>
+  <header>
+    <h1>CINQ</h1>
+    <nav>
+      <ul>
+        <li><a href="#">login</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Calendar</a></li>
+        <li><a href="#">inquire</a></li>
+      </ul>
+    </nav>
+    <div id="userProfile">  
+      <img src="image/Nitro_Wallpaper_01_3840x2400.jpg" alt="Profile Picture">
+      <span>Welcome, USER!</span>
+      <button id="logoutBtn">Logout</button>
+    </div>
+    <button id="createAssignmentBtn">Chat Bot</button>
+  </header>
+  <main id="assignmentsList">
+    <!-- Assignment items will be added here dynamically -->
+  </main>
+  <aside id="upcomingAssignments">
+    <h2>CHEERDANCE</h2>
+    <ul>
+      <li>mema 1 - Due: 03/04/2024</li>
+      <li>mema 2 - Due: 05/04/2024</li>
+      <li>mema 3 - Due: 07/04/2024</li>
+    </ul>
+  </aside>
+
+  <div id="createAssignmentModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Create New Assignment</h2>
+      <form id="createAssignmentForm">
+        <label for="assignmentTitle">Title:</label>
+        <input type="text" id="assignmentTitle" name="assignmentTitle">
+        <label for="assignmentDescription">Description:</label>
+        <textarea id="assignmentDescription" name="assignmentDescription"></textarea>
+        <label for="dueDate">Due Date:</label>
+        <input type="date" id="dueDate" name="dueDate">
+        <label for="maxPoints">Max Points:</label>
+        <input type="number" id="maxPoints" name="maxPoints" min="1">
+        <button type="submit">Create</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="viewGradeModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>View Assignment Grade</h2>
+      <p><strong>Assignment Title:</strong> Assignment 1</p>
+      <p><strong>Your Grade:</strong> 95 / 100</p>
+    </div>
+  </div>
+
+  <div id="editProfileModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Edit Profile</h2>
+      <form id="editProfileForm">
+        <label for="editName">Name:</label>
+        <input type="text" id="editName" name="editName" value="John Doe">
+        <label for="editEmail">Email:</label>
+        <input type="email" id="editEmail" name="editEmail" value="johndoe@example.com">
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="courseInfoModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Course Information</h2>
+      <p><strong>Course Name:</strong> English Literature</p>
+      <p><strong>Instructor:</strong> Prof. Jane Smith</p>
+      <p><strong>Class Schedule:</strong> Mondays and Wednesdays, 10:00 AM - 11:30 AM</p>
+    </div>
+  </div>
+
+  <div id="joinClassModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Join a Class</h2>
+      <form id="joinClassForm">
+        <label for="classCode">Class Code:</label>
+        <input type="text" id="classCode" name="classCode">
+        <button type="submit">Join</button>
+      </form>
+    </div>
+  </div>
+  
+  <div id="viewAttendanceModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>View Attendance</h2>
+      <p><strong>Class Name:</strong> Physics</p>
+      <p><strong>Date:</strong> March 30, 2024</p>
+      <p><strong>Attendance:</strong> Present</p>
+    </div>
+  </div>
+  <script src="scriptt.js"></script>
+  <footer>
+    <p>&copy; 2024 CINQ. All rights reserved.</p>
+  </footer
+
+</body>
+</html>
